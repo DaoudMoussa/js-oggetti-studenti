@@ -10,6 +10,8 @@
 // Creare con questi dati un nuovo oggetto e inserirlo nell'array del punto precedente.
 
 /*=========== 1 ===========*/
+console.log('PUNTO 1');
+
 var student = {
     'name' : 'Daoud',
     'lastName' : 'Moussa',
@@ -27,5 +29,38 @@ for (var key in student) {
         case 'age':
             console.log('Lo studente ha ' + student[key] + ' anni.');
         break;
+    }
+}
+
+
+/*=========== 2 ===========*/
+console.log('PUNTO 2');
+
+var students = [
+    {
+        'name' : 'Pippo',
+        'lastName' : 'Baudo',
+        'age' : 83
+    },
+
+    {
+        'name' : 'Pluto',
+        'lastName' : 'Topolino',
+        'age' : 14
+    },
+
+    {
+        'name' : 'Daoud',
+        'lastName' : 'Moussa',
+        'age' : 20
+    }
+];
+
+for (var i = 0; i < students.length; i++) {
+    console.log('STUDENTE ' + (i+1) + ':');
+    for (var key in students[i]) {
+        if(key != 'age') {
+            console.log(students[i][key]);
+        }
     }
 }
